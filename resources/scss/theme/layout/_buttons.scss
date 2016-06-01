@@ -1,9 +1,10 @@
 #buttons {
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.5em;
     padding: 0;
-    float: right;
     list-style: none;
     display: inline-block;
-    margin: 4em 1.5em 0 0;
 
     #small-menu-button {
         display: none;
@@ -23,6 +24,8 @@
         float: none;
         display: block;
         margin: 1em 1em 0;
+        width: calc(100% - 2em);
+        right: 0;
 
         #small-menu-button {
             display: inline-block;

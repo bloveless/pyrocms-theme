@@ -1,18 +1,25 @@
 #header {
     height: 8em;
     background: $gray-dark;
+    position: relative;
+    margin-left: 12em;
 
     .description {
-        margin-top: 0.75em;
+        padding-top: 0.75em;
         margin-left: 2.5em;
         color: $gray-light;
-        display: inline-block;
     }
 }
 
 @include media-breakpoint-down(sm) {
     #header {
         height: auto;
-        padding: 1em 0;
+        padding: 1em 0 5em 0;
+        margin-left: 0;
+
+        .description {
+            padding-top: 0em;
+            margin-left: 1em;
+        }
     }
 }
