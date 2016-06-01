@@ -35,7 +35,7 @@ $navigation-active-bg: $gray-dark;
     #navigation {
         .nav {
             li {
-                &:not(:first-child) {
+                &:not(:first-child):not(:last-child) {
                     display: none;
                 }
             }

@@ -1,6 +1,9 @@
 <header id="header">
 
-    {% include "theme::partials/sections" %}
+    <div class="description">
+        {{ trans(template.cp.sections.active.description ?: template.addons.modules.active().description) }}
+    </div>
+
     {% include "theme::partials/buttons" %}
 
 </header>

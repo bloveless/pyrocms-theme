@@ -1,6 +1,13 @@
 #header {
     height: 8em;
     background: $gray-dark;
+
+    .description {
+        margin-top: 0.75em;
+        margin-left: 2.5em;
+        color: $gray-light;
+        display: inline-block;
+    }
 }
 
 @include media-breakpoint-down(sm) {

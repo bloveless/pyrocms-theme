@@ -1,0 +1,11 @@
+#main-container {
+   width: calc(100% - 12em);
+   float: right;
+}
+
+@include media-breakpoint-down(sm) {
+   #main-container {
+      width: 100%;
+      float: none;
+   }
+}

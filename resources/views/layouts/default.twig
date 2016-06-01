@@ -15,18 +15,26 @@
 {% include "theme::partials/navbar" %}
 {% include "theme::partials/header" %}
 
-<main id="main">
-
-    {% include "theme::partials/banner" %}
-    {% include "theme::partials/breadcrumbs" %}
-
-    <div class="container-fluid">
-        {% include "theme::partials/messages" %}
+<div class="clearfix">
+    <div id="sections-container">
+        {% include "theme::partials/sections" %}
     </div>
 
-    {{ block('content') }}
+    <div id="main-container">
+        <main id="main">
 
-</main>
+            {% include "theme::partials/banner" %}
+            {% include "theme::partials/breadcrumbs" %}
+
+            <div class="container-fluid">
+                {% include "theme::partials/messages" %}
+            </div>
+
+            {{ block('content') }}
+
+        </main>
+    </div>
+</div>
 
 {% include "theme::partials/footer" %}
 {% include "theme::partials/modals" %}

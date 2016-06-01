@@ -5,6 +5,10 @@
     display: inline-block;
     margin: 4em 1.5em 0 0;
 
+    #small-menu-button {
+        display: none;
+    }
+
     .btn {
         display: inline-block;
 
@@ -18,10 +22,32 @@
     #buttons {
         float: none;
         display: block;
-        margin: 1em 1.5em 0;
+        margin: 1em 1em 0;
+
+        #small-menu-button {
+            display: inline-block;
+            text-align: center;
+            float: right;
+
+            a.show-menu {
+                color: $gray-light;
+                display: inline-block;
+                width: 1.74rem;
+                border: 1px solid transparent;
+                padding: 0.375rem 0;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
 
         .btn {
-            display: block;
+            display: inline-block;
+            width: calc(100% - 2em);
+            margin-bottom: 1px;
+
+            &:not(:first-of-type) {
+                margin-left: 0;
+            }
         }
     }
 }

@@ -1,69 +1,74 @@
-#sections {
-    display: inline-block;
-    margin: 1.5em 0 0 1.5em;
+#sections-container {
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    width: 12em;
+    float: left;
 
-        li {
-            display: inline-block;
+    #sections {
+        display: block;
+        margin: 1em 0 0 1em;
 
-            a {
-                font-size: 1.5em;
-                margin-right: 1em;
-                position: relative;
-                color: $gray-lighter;
-                text-decoration: none;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
 
-                i {
-                    font-size: .5em;
-                    color: $gray-lighter;
-                }
-            }
+            li {
+                display: block;
 
-            &:not(:last-child) {
-                a:after {
-                    top: 0;
-                    content: '/';
-                    right: -0.75em;
-                    position: absolute;
-                    margin-top: -0.15em;
-                    color: lighten($gray, 15%);
-                }
-            }
-
-            &.active {
                 a {
-                    color: $blue;
+                    font-size: 1.5em;
+                    margin-right: 1em;
+                    position: relative;
+                    color: $gray-dark;
+                    text-decoration: none;
+
+                    i {
+                        font-size: .5em;
+                        color: $gray-lighter;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $blue;
+                    }
                 }
             }
         }
-    }
-
-    .description {
-        margin-top: 0.75em;
-        color: $gray-light;
-        display: inline-block;
     }
 }
 
 @include media-breakpoint-down(sm) {
-    #sections {
-        margin-top: 0;
-        display: block;
 
-        ul {
-            li {
-                a {
-                    font-size: $font-size-root;
-                }
-            }
+    #sections-container {
+        width: 100%;
+        height: inherit;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: .1rem solid $gray-dark;
+        background-color: $gray-light;
+        -webkit-transition: max-height 0.8s;
+        -moz-transition: max-height 0.8s;
+        transition: max-height 0.8s, padding .8s, margin-bottom .8s;
+
+        &.visible {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+
+            max-height: 200px;
         }
 
-        .description {
-            display: none;
+        #sections {
+            margin-top: 0;
+            display: block;
+
+            ul {
+                li {
+                    a {
+                        font-size: 1em;
+                    }
+                }
+            }
         }
     }
 }
